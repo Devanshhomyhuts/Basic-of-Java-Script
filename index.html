@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Report Generator</title>
+</head>
+<body>
+    <h2>AI Medical Report Generator</h2>
+
+    <form action="/generate" method="post">
+        <input type="text" name="name" placeholder="Patient Name" required><br>
+        <input type="number" name="age" placeholder="Age" required><br>
+        <textarea name="symptoms" placeholder="Symptoms"></textarea><br>
+        <textarea name="diagnosis" placeholder="Diagnosis"></textarea><br>
+        <textarea name="treatment" placeholder="Treatment"></textarea><br>
+        <button type="submit">Generate Report</button>
+    </form>
+
+    {% if report %}
+        <h3>Generated Report:</h3>
+        <pre>{{ report }}</pre>
+
+        <form action="/download" method="post">
+            <input type="hidden" name="report" value="{{ report }}">
+            <button type="submit">Download PDF</button>
+        </form>
+    {% endif %}
+</body>
+</html>
