@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+</head>
+
+<body>
+
+    <center>
+
+        <h1>THIS IS MY TO-DO LIST</h1>
+
+        <div id="firstContainer" class="container">
+        </div>
+
+        
+
+            <div class="form-group">
+
+                <label for="taskInput">Task:</label>
+
+                <input type="text" id="taskInput" placeholder="Title of the task" style="margin: 10px 0;">
+            </div>
+
+            <div class="form-group">
+                <label for="taskDescription"> Need to do task </label>
+                <textarea id="taskDescription" rows="3" placeholder="Enter a new task"
+                    style="margin: 10px 0; width: 300px;"></textarea>
+
+
+            </div>
+
+            <button type="submit" id="add" class="btn btn-primary"> Submit Tasks</button>
+
+    </center>
+
+
+    <div id="items" class="my-4">
+
+        <h2>These are my tasks to do</h2>
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th scope="col" style="width: 5%;">S.No</th>
+                    <th scope="col" style="width: 30%;">Task Title</th>
+                    <th scope="col">Task Description</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <th scope="row">1</th>
+                    <td style="text-align: center;">To build Home page</td>
+                    <td style="text-align: center;"> Get bricks and cement</td>
+                    <td style="text-align: center;"><button type="button" class="btn-sm">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
